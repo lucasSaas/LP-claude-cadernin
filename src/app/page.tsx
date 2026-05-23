@@ -9,6 +9,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { Footer } from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
         <FAQ />
         <FinalCTA />
       </main>
+      <Footer />
     </>
   );
 }
