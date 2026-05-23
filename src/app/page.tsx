@@ -4,6 +4,7 @@ import { VideoSection } from "@/components/sections/VideoSection";
 import { PersonaSection } from "@/components/sections/PersonaSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { ComparisonTable } from "@/components/sections/ComparisonTable";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <PersonaSection />
         <HowItWorks />
         <FeaturesSection />
+        <ComparisonTable />
       </main>
     </>
   );
