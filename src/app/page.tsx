@@ -1,7 +1,12 @@
+import { Header } from "@/components/sections/Header";
+
 export default function HomePage() {
   return (
-    <main className="flex-1">
-      {/* Sections appended phase by phase */}
-    </main>
+    <>
+      <Header />
+      <main className="flex-1">
+        {/* Sections appended phase by phase */}
+      </main>
+    </>
   );
 }
