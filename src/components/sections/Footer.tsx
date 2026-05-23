@@ -114,8 +114,9 @@ export function Footer() {
       </div>
 
       <div className="border-t border-slate-800">
+        {/* TODO: adicionar CNPJ quando empresa estiver formalizada */}
         <div className="mx-auto max-w-6xl px-4 py-6 text-center text-xs text-slate-500 md:px-6">
-          CNPJ: [seu CNPJ] · © {new Date().getFullYear()} {BRAND_NAME} · Feito no Brasil 🇧🇷
+          © {new Date().getFullYear()} {BRAND_NAME} · Feito no Brasil 🇧🇷
         </div>
       </div>
     </footer>

@@ -5,7 +5,8 @@ import { PersonaSection } from "@/components/sections/PersonaSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+// TODO: reativar quando tivermos 3 depoimentos reais com foto, nome, loja e número específico
+// import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -22,7 +23,7 @@ export default function HomePage() {
         <HowItWorks />
         <FeaturesSection />
         <ComparisonTable />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <PricingSection />
         <FAQ />
         <FinalCTA />
