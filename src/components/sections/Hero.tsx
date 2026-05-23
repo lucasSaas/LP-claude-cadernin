@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import { PhoneFrame } from "@/components/PhoneFrame";
+import { HomeHeroScene } from "@/components/screens/HomeHeroScene";
 import { SIGNUP_URL } from "@/lib/constants";
 
 export function Hero() {
@@ -51,20 +52,14 @@ export function Hero() {
         </div>
 
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute -right-10 top-10 hidden h-72 w-72 rounded-full bg-brand-primary/10 blur-3xl lg:block" />
-          <div className="absolute -left-10 bottom-0 hidden h-56 w-56 rounded-full bg-brand-success/10 blur-3xl lg:block" />
-          <div className="relative -rotate-2 transition-transform duration-500 hover:rotate-0">
-            <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl ring-1 ring-slate-900/5">
-              <Image
-                src="/images/screens/home.png"
-                alt="Tela inicial do No Cadernin no celular"
-                width={1200}
-                height={966}
-                priority
-                sizes="(min-width: 1024px) 480px, (min-width: 640px) 80vw, 90vw"
-                className="block h-auto w-full max-w-[480px]"
-              />
-            </div>
+          <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
+            <div className="h-[500px] w-[500px] rounded-full bg-gradient-to-br from-blue-100/60 to-emerald-100/40 blur-3xl" />
+          </div>
+
+          <div className="relative [transform:rotate(-2deg)] transition-transform duration-500 hover:[transform:rotate(0deg)]">
+            <PhoneFrame>
+              <HomeHeroScene />
+            </PhoneFrame>
           </div>
         </div>
       </div>
