@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     title: "No Cadernin — Saia do caderno e venda com cabeça",
     description:
       "Sistema de gestão mobile-first por R$4,99/mês. Controle vendas, estoque, lucro e equipe.",
-    images: ["/images/og-image.png"],
     locale: "pt_BR",
     type: "website",
   },

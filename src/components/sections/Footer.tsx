@@ -1,6 +1,16 @@
 import Link from "next/link";
-import { Instagram, NotebookPen } from "lucide-react";
+import { NotebookPen } from "lucide-react";
 import { WHATSAPP_URL, BRAND_NAME } from "@/lib/constants";
+
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
 
 function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -45,7 +55,7 @@ export function Footer() {
               aria-label="Instagram"
               className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-slate-800 text-slate-300 transition-colors hover:bg-brand-primary hover:text-white"
             >
-              <Instagram className="h-4 w-4" aria-hidden />
+              <InstagramIcon className="h-4 w-4" />
             </a>
             <a
               href={WHATSAPP_URL}

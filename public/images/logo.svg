@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" fill="none" role="img" aria-label="No Cadernin">
+  <rect width="44" height="44" x="6" y="6" rx="10" fill="#2563EB"/>
+  <path d="M19 18h14v3.5H19zm0 7h14v3.5H19zm0 7h10v3.5H19z" fill="#FFFFFF"/>
+  <text x="62" y="36" font-family="Manrope, system-ui, sans-serif" font-weight="800" font-size="22" fill="#0F172A">No Cadernin</text>
+</svg>
