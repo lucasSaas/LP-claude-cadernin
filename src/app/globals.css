@@ -139,3 +139,85 @@
     @apply font-sans;
   }
 }
+
+/* === Hero animations === */
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.5);
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.2s ease-in-out infinite;
+}
+
+@keyframes finger-tap {
+  0%, 100% {
+    transform: translate(-50%, 4px) scale(1);
+  }
+  45% {
+    transform: translate(-50%, 8px) scale(0.92);
+  }
+  55% {
+    transform: translate(-50%, 8px) scale(0.92);
+  }
+}
+
+.animate-finger-tap {
+  animation: finger-tap 2.2s ease-in-out infinite;
+}
+
+@keyframes tap-ring {
+  0%, 40% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(0.8);
+  }
+  70% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(1.6);
+  }
+}
+
+.animate-tap-ring {
+  animation: tap-ring 2.2s ease-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hero-pulse-btn::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 12px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+  z-index: -1;
+  opacity: 0;
+  animation: glow-pulse 2.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-soft,
+  .animate-finger-tap,
+  .animate-tap-ring,
+  .hero-pulse-btn::before {
+    animation: none;
+  }
+}
