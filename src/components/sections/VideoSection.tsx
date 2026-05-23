@@ -1,3 +1,4 @@
+import { Play } from "lucide-react";
 import { SIGNUP_URL, VIDEO_ID } from "@/lib/constants";
 
 export function VideoSection() {
@@ -12,16 +13,29 @@ export function VideoSection() {
           loja precisa.
         </p>
 
-        <div className="relative mx-auto mt-10 aspect-video w-full max-w-3xl overflow-hidden rounded-2xl bg-slate-900 shadow-2xl ring-1 ring-slate-900/10">
-          <iframe
-            src={`https://www.youtube.com/embed/${VIDEO_ID}`}
-            title="No Cadernin — Apresentação"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-            className="absolute inset-0 h-full w-full"
-          />
-        </div>
+        {VIDEO_ID ? (
+          <div className="relative mx-auto mt-10 aspect-video w-full max-w-3xl overflow-hidden rounded-2xl bg-slate-900 shadow-2xl ring-1 ring-slate-900/10">
+            <iframe
+              src={`https://www.youtube.com/embed/${VIDEO_ID}`}
+              title="No Cadernin — Apresentação"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+        ) : (
+          <div
+            role="img"
+            aria-label="Vídeo do fundador em breve"
+            className="mx-auto mt-10 flex aspect-video w-full max-w-3xl flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-slate-300 bg-slate-100 text-slate-500"
+          >
+            <Play className="h-10 w-10" aria-hidden />
+            <span className="text-sm font-medium md:text-base">
+              Vídeo do fundador em breve
+            </span>
+          </div>
+        )}
 
         <div className="mt-10">
           <a
