@@ -1,5 +1,6 @@
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
+import { VideoSection } from "@/components/sections/VideoSection";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <VideoSection />
       </main>
     </>
   );
