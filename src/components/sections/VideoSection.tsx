@@ -3,7 +3,7 @@ import { SIGNUP_URL, VIDEO_ID } from "@/lib/constants";
 
 export function VideoSection() {
   return (
-    <section id="video" className="bg-white py-16 md:py-24">
+    <section id="video" className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
         <h2 className="font-heading text-3xl font-extrabold leading-tight text-brand-fg md:text-4xl">
           Eu mesmo construí o No Cadernin pra resolver um problema que vi em mais de 50 lojas

@@ -2,7 +2,7 @@ import { SIGNUP_URL } from "@/lib/constants";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-primary to-brand-primary-dark py-20 md:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-primary to-brand-primary-dark py-20 lg:py-28">
       <div className="absolute inset-0 opacity-20" aria-hidden>
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
         <div className="absolute -right-20 bottom-10 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
