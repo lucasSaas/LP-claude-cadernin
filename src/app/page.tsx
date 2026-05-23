@@ -5,6 +5,8 @@ import { PersonaSection } from "@/components/sections/PersonaSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { PricingSection } from "@/components/sections/PricingSection";
 
 export default function HomePage() {
   return (
@@ -17,6 +19,8 @@ export default function HomePage() {
         <HowItWorks />
         <FeaturesSection />
         <ComparisonTable />
+        <TestimonialsSection />
+        <PricingSection />
       </main>
     </>
   );
