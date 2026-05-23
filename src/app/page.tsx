@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { VideoSection } from "@/components/sections/VideoSection";
 import { PersonaSection } from "@/components/sections/PersonaSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { FeaturesSection } from "@/components/sections/FeaturesSection";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
         <VideoSection />
         <PersonaSection />
         <HowItWorks />
+        <FeaturesSection />
       </main>
     </>
   );
