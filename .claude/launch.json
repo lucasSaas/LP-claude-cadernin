@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nocadernin-lp",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "cwd": "/Users/lucasnunes/Documents/nocadernin-lp",
+      "env": {
+        "NPM_CONFIG_CACHE": "/tmp/npm-cache-nocadernin"
+      }
+    }
+  ]
+}

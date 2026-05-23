@@ -13,8 +13,7 @@ export function FinalCTA() {
           Pronto pra sair do caderno?
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-blue-100 md:text-xl">
-          Mais de [X] lojistas já estão vendendo com cabeça. R$4,99/mês. Sem fidelidade. Sem
-          letra miúda.
+          Mais de 100 lojistas já estão usando. R$4,99/mês. Sem fidelidade. Sem letra miúda.
         </p>
 
         <div className="mt-10">
