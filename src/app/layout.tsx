@@ -3,6 +3,8 @@ import { Inter, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,6 +47,8 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col bg-brand-bg text-brand-fg font-sans">
         {children}
+        <WhatsAppFloat />
+        <CookieBanner />
         <Analytics />
         <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
         <MetaPixel id={process.env.NEXT_PUBLIC_META_PIXEL_ID ?? ""} />
