@@ -1,11 +1,12 @@
 import { Header } from "@/components/sections/Header";
+import { Hero } from "@/components/sections/Hero";
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <main className="flex-1">
-        {/* Sections appended phase by phase */}
+        <Hero />
       </main>
     </>
   );
