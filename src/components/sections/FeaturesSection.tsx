@@ -1,18 +1,25 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PhoneFrame } from "@/components/PhoneFrame";
+import { EstoqueScreen } from "@/components/screens/EstoqueScreen";
+import { ExportarScreen } from "@/components/screens/ExportarScreen";
+import { MetasScreen } from "@/components/screens/MetasScreen";
+import { NovaVendaScreen } from "@/components/screens/NovaVendaScreen";
+import { RelatoriosScreen } from "@/components/screens/RelatoriosScreen";
+import { TrancarScreen } from "@/components/screens/TrancarScreen";
+import { VendedoresScreen } from "@/components/screens/VendedoresScreen";
 import { cn } from "@/lib/utils";
 
 type Slide = {
   title: string;
   description: string;
   bonus: string | null;
-  image: string;
-  imageAlt: string;
+  screen: ReactNode;
   highlight: string | null;
 };
 
@@ -23,8 +30,7 @@ const slides: Slide[] = [
       "Descrição do produto, valor, vendedor e forma de pagamento. Pronto — venda registrada, com confirmação na hora. Funciona pra dinheiro, PIX e cartão, e o sistema já separa pra você no fim do dia.",
     bonus:
       "Bônus: você pode vender até item que não está cadastrado no estoque. Não trava a sua loja por causa de cadastro.",
-    image: "/images/screens/nova-venda.png",
-    imageAlt: "Tela de Nova Venda com produto adicionado",
+    screen: <NovaVendaScreen />,
     highlight: null,
   },
   {
@@ -32,17 +38,15 @@ const slides: Slide[] = [
     description:
       "Cadastra o produto com o preço de custo. Vende pelo preço de venda. O No Cadernin calcula sua margem de lucro automaticamente. Você sabe quanto sobrou de verdade no fim do mês, não só quanto entrou.",
     bonus: null,
-    image: "/images/screens/estoque.png",
-    imageAlt: "Tela de Estoque Manual com produtos cadastrados",
-    highlight: "Custo R$10 + Venda R$20 = Lucro R$10/un. Tudo calculado pra você.",
+    screen: <EstoqueScreen />,
+    highlight: "Custo R$13 + Venda R$35 = Lucro R$22/un. Tudo calculado pra você.",
   },
   {
     title: "Ranking de vendedores e comissão automática",
     description:
       'Cada vendedor faz login no celular dele. Você vê quem vendeu mais, quanto faturou, e o sistema já calcula a comissão. Fim das discussões no fechamento, fim do "acho que vendi mais que ela".',
     bonus: null,
-    image: "/images/screens/vendedores.png",
-    imageAlt: "Tela de Vendedores com ranking de vendas",
+    screen: <VendedoresScreen />,
     highlight: null,
   },
   {
@@ -50,8 +54,7 @@ const slides: Slide[] = [
     description:
       "Diz quanto quer faturar no mês. O No Cadernin calcula a meta diária e semanal que você precisa bater pra chegar lá. Acompanha tudo em tempo real — sem precisar saber Excel.",
     bonus: null,
-    image: "/images/screens/metas.png",
-    imageAlt: "Tela de Metas com calculadora",
+    screen: <MetasScreen />,
     highlight: null,
   },
   {
@@ -59,8 +62,7 @@ const slides: Slide[] = [
     description:
       'Filtra por período. Vê total de vendas, lucro estimado, formas de pagamento mais usadas, produtos campeões. Tudo no celular, em segundos. Fim do "achismo".',
     bonus: null,
-    image: "/images/screens/relatorios.png",
-    imageAlt: "Tela de Relatórios com métricas",
+    screen: <RelatoriosScreen />,
     highlight: null,
   },
   {
@@ -68,8 +70,7 @@ const slides: Slide[] = [
     description:
       "Precisa mandar pro contador? Quer fazer análise no Excel? Um clique e baixa tudo. Seus dados são seus — sem amarra, sem ficar refém da gente.",
     bonus: null,
-    image: "/images/screens/configuracoes.png",
-    imageAlt: "Tela de Configurações com botão exportar CSV",
+    screen: <ExportarScreen />,
     highlight: null,
   },
   {
@@ -77,8 +78,7 @@ const slides: Slide[] = [
     description:
       "Funcionário não precisa ver tudo o que você vê. Trava com senha as áreas sensíveis (relatórios, estoque, dados da loja). Você decide o que cada um pode acessar.",
     bonus: null,
-    image: "/images/screens/configuracoes.png",
-    imageAlt: "Configurações com proteção por senha",
+    screen: <TrancarScreen />,
     highlight: null,
   },
 ];
@@ -128,7 +128,7 @@ export function FeaturesSection() {
             <div className="flex">
               {slides.map((slide, idx) => (
                 <div key={idx} className="min-w-0 flex-[0_0_100%]">
-                  <PhoneFrame src={slide.image} alt={slide.imageAlt} />
+                  <PhoneFrame>{slide.screen}</PhoneFrame>
                 </div>
               ))}
             </div>
@@ -157,7 +157,11 @@ export function FeaturesSection() {
         </div>
 
         <div className="mt-10 flex flex-col items-center gap-5 lg:mt-12">
-          <div className="flex items-center gap-2" role="tablist" aria-label="Selecionar funcionalidade">
+          <div
+            className="flex items-center gap-2"
+            role="tablist"
+            aria-label="Selecionar funcionalidade"
+          >
             {slides.map((_, idx) => (
               <button
                 key={idx}
