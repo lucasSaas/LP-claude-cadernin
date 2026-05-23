@@ -7,6 +7,8 @@ import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
+import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function HomePage() {
   return (
@@ -21,6 +23,8 @@ export default function HomePage() {
         <ComparisonTable />
         <TestimonialsSection />
         <PricingSection />
+        <FAQ />
+        <FinalCTA />
       </main>
     </>
   );
