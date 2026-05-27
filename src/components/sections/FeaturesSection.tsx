@@ -86,7 +86,7 @@ const slides: Slide[] = [
 export function FeaturesSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, duration: 25 },
-    [Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })],
+    [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })],
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
